@@ -1,0 +1,22 @@
+<div *ngIf="hero" class="heroDetails">
+
+  <h2>Detalles de {{hero.name | uppercase}}</h2>
+  <div class="heroId"><span>Id: </span>{{hero.id}}</div>
+
+  <div class="heroNameInput">
+    <label>Nombre:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+
+  <div class="heroHabilities">
+    <label>Habilidades:
+      <ul>
+        <li *ngFor="let habilities of hero.habilities; let i=index">
+          {{habilities}}
+        </li>
+      </ul>
+    </label>
+  </div>
+
+</div>

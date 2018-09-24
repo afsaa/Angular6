@@ -5,25 +5,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedHero" class="heroDetails">
-
-  <h2>Detalles de {{selectedHero.name | uppercase}}</h2>
-  <div class="heroId"><span>Id: </span>{{selectedHero.id}}</div>
-
-  <div class="heroNameInput">
-    <label>Nombre:
-      <input [(ngModel)]="selectedHero.name" placeholder="name">
-    </label>
-  </div>
-
-  <div class="heroHabilities">
-    <label>Habilidades:
-      <ul>
-        <li *ngFor="let habilities of selectedHero.habilities; let i=index">
-          {{habilities}}
-        </li>
-      </ul>
-    </label>
-  </div>
-
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
